@@ -140,9 +140,9 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <div className="relative z-10 w-full text-center text-[10px] uppercase tracking-widest text-white/40">
+      {/* <div className="relative z-10 w-full text-center text-[10px] uppercase tracking-widest text-white/40">
         Scroll down to experience transformation
-      </div>
+      </div> */}
     </section>
   );
 }
