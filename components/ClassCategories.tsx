@@ -139,7 +139,7 @@ export default function ClassCategories() {
 
       {/* Mobile Stacked Card View */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:hidden">
-        {categories.map((cat, idx) => (
+        {categories.slice(0, 4).map((cat, idx) => (
           <ScrollReveal key={cat.id} delay={idx * 0.08}>
             <div
               onClick={() => store.setTrialModalOpen(true)}

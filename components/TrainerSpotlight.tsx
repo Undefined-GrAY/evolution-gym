@@ -37,19 +37,19 @@ export default function TrainerSpotlight() {
         </ScrollReveal>
 
         {/* Grid of Trainers */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {TRAINERS.map((t, index) => {
             if (t.isFeatured) {
               return (
-                <ScrollReveal key={t.id} className="col-span-1 md:col-span-2 row-span-2" delay={0.1}>
+                <ScrollReveal key={t.id} className="col-span-2 md:col-span-2 row-span-2" delay={0.1}>
                   <div
-                    className="relative rounded-3xl overflow-hidden bg-black border border-white/15 min-h-[440px] group flex flex-col justify-end p-8 shadow-2xl cursor-pointer active:scale-98 transition-transform"
+                    className="relative rounded-3xl overflow-hidden bg-black border border-white/15 min-h-[400px] sm:min-h-[440px] group flex flex-col justify-end p-6 sm:p-8 shadow-2xl cursor-pointer active:scale-98 transition-transform"
                     onClick={() => store.setTrialModalOpen(true)}
                   >
                     <img
                       src={t.image}
                       alt={t.name}
-                      className="absolute inset-0 w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-700"
+                      className="absolute inset-0 w-full h-full object-cover object-top grayscale contrast-125 group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
                     <div className="relative z-10">
@@ -83,25 +83,25 @@ export default function TrainerSpotlight() {
             }
 
             return (
-              <ScrollReveal key={t.id} delay={0.1 * index}>
+              <ScrollReveal key={t.id} className="col-span-1" delay={0.1 * index}>
                 <div
-                  className="relative rounded-3xl overflow-hidden bg-black/40 border border-white/10 aspect-[3/4] group cursor-pointer flex flex-col justify-end p-6 hover:border-white/30 transition-all shadow-lg active:scale-98"
+                  className="relative rounded-3xl overflow-hidden bg-black/40 border border-white/10 aspect-[3/4] group cursor-pointer flex flex-col justify-end p-4 sm:p-6 hover:border-white/30 transition-all shadow-lg active:scale-98"
                   onClick={() => store.setTrialModalOpen(true)}
                 >
                   <img
                     src={t.image}
                     alt={t.name}
-                    className="absolute inset-0 w-full h-full object-cover grayscale opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                    className="absolute inset-0 w-full h-full object-cover object-top grayscale opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
                   <div className="relative z-10">
-                    <span className="text-[10px] font-semibold text-[#63739A] uppercase tracking-widest block mb-1">
+                    <span className="text-[9px] sm:text-[10px] font-semibold text-[#63739A] uppercase tracking-widest block mb-0.5">
                       {t.experience}
                     </span>
-                    <h3 className="text-2xl font-bold uppercase font-[#Space_Grotesk] text-white mb-1">
+                    <h3 className="text-lg sm:text-2xl font-bold uppercase font-[#Space_Grotesk] text-white mb-0.5 leading-tight">
                       {t.name}
                     </h3>
-                    <p className="text-[11px] text-white/70 font-light line-clamp-1">
+                    <p className="text-[10px] sm:text-[11px] text-white/70 font-light line-clamp-1">
                       {t.role}
                     </p>
                   </div>

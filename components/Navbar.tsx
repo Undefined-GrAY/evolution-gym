@@ -28,8 +28,8 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Home', shortName: 'Home', href: '/' },
-    { name: 'Classes & Schedule', shortName: 'Schedule', href: '/classes' },
-    { name: 'Membership & Pricing', shortName: 'Pricing', href: '/pricing' },
+    { name: ' Schedule', shortName: 'Schedule', href: '/classes' },
+    { name: 'Pricing', shortName: 'Pricing', href: '/pricing' },
     { name: 'Trainers', shortName: 'Trainers', href: '/trainers' },
     { name: 'Dashboard', shortName: 'Dashboard', href: '/dashboard' }
   ];

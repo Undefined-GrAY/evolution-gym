@@ -61,7 +61,7 @@ export default function AestheticsTwo() {
         </div>
 
         {/* Architectural Image Showcase */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <ScrollReveal delay={0.15}>
             <div className="relative rounded-3xl overflow-hidden h-[340px] group border border-white/10">
               <img
@@ -99,7 +99,7 @@ export default function AestheticsTwo() {
               </div>
             </div>
           </ScrollReveal>
-        </div>
+        </div> */}
       </div>
     </section>
   );
