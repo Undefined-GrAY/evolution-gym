@@ -1,0 +1,109 @@
+'use client';
+
+import { useState } from 'react';
+import { TESTIMONIALS } from '@/lib/data';
+import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
+
+export default function Testimonials() {
+  const [activeIdx, setActiveIdx] = useState(0);
+
+  const nextTestimonial = () => {
+    setActiveIdx((prev) => (prev + 1) % TESTIMONIALS.length);
+  };
+
+  const prevTestimonial = () => {
+    setActiveIdx((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
+  };
+
+  return (
+    <section className="py-28 bg-white text-[#2A2A2D] w-full overflow-hidden border-t border-gray-100">
+      <ScrollReveal>
+        <div className="max-w-7xl mx-auto px-6 sm:px-12 text-center mb-16">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#475470] block mb-3">
+            (9) Authentic Member Feedback
+          </span>
+          <h2 className="fluid-h1 font-black uppercase text-[#2A2A2D] tracking-tight max-w-4xl mx-auto font-[#Space_Grotesk] leading-none">
+            VOICES OF MEMBERS WHO VALUE QUALITY OVER COMPROMISE
+          </h2>
+        </div>
+      </ScrollReveal>
+
+      {/* Curved Fan Carousel matching input_file_4.png */}
+      <ScrollReveal delay={0.15}>
+        <div className="max-w-7xl mx-auto px-6 sm:px-12 relative">
+          <div className="flex gap-6 overflow-x-auto pb-12 pt-6 snap-x snap-mandatory hide-scrollbar justify-center items-center">
+            {TESTIMONIALS.map((t, idx) => {
+              const isCurrent = idx === activeIdx;
+              return (
+                <div
+                  key={t.id}
+                  onClick={() => setActiveIdx(idx)}
+                  className={`min-w-[340px] sm:min-w-[420px] bg-[#E4E8F1] p-8 sm:p-10 rounded-[2.5rem] snap-center flex flex-col justify-between shadow-xl cursor-pointer transition-all duration-500 transform ${
+                    t.rotation
+                  } ${isCurrent ? 'scale-105 bg-white border-2 border-[#475470] shadow-2xl -rotate-0' : 'opacity-85 hover:opacity-100'}`}
+                >
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#475470]/30 flex-shrink-0">
+                      <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold font-[#Space_Grotesk] text-[#2A2A2D]">
+                        {t.name}
+                      </h3>
+                      <p className="text-xs text-[#475470] font-medium leading-tight">
+                        {t.role} <br />
+                        <span className="text-[#63739A] font-normal">{t.tenure}</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <Quote className="w-8 h-8 text-[#475470]/30 mb-3" />
+                    <p className="text-sm sm:text-base text-[#2A2A2D]/90 italic font-light leading-relaxed mb-6">
+                      "{t.quote}"
+                    </p>
+                    <div className="border-t border-[#475470]/20 pt-4 flex justify-between items-center text-[10px] font-bold uppercase tracking-widest text-[#475470]">
+                      <span>FOCUS: {t.focus}</span>
+                      <span>Verified Member</span>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Carousel Navigation Buttons matching input_file_4.png bottom controls */}
+          <div className="flex justify-center items-center gap-4 mt-6">
+            <button
+              type="button"
+              onClick={prevTestimonial}
+              className="w-12 h-12 rounded-full bg-[#E4E8F1] hover:bg-[#475470] text-[#2A2A2D] hover:text-white flex items-center justify-center transition-colors shadow-md cursor-pointer active:scale-95"
+              aria-label="Previous Testimonial"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <div className="flex items-center gap-2">
+              {TESTIMONIALS.map((_, i) => (
+                <span
+                  key={i}
+                  className={`h-2 rounded-full transition-all ${
+                    i === activeIdx ? 'w-8 bg-[#475470]' : 'w-2 bg-[#E4E8F1]'
+                  }`}
+                />
+              ))}
+            </div>
+            <button
+              type="button"
+              onClick={nextTestimonial}
+              className="w-12 h-12 rounded-full bg-[#E4E8F1] hover:bg-[#475470] text-[#2A2A2D] hover:text-white flex items-center justify-center transition-colors shadow-md cursor-pointer active:scale-95"
+              aria-label="Next Testimonial"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+          </div>
+        </div>
+      </ScrollReveal>
+    </section>
+  );
+}
