@@ -261,6 +261,36 @@ export const TESTIMONIALS = [
     focus: 'Performance & Longevity',
     avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop',
     rotation: '-rotate-1'
+  },
+  {
+    id: 't-4',
+    name: 'Elena',
+    role: 'Creative Director • 29 y.o.',
+    tenure: 'Member since 2024',
+    quote: 'The thermal SPA after high-intensity strength sessions is unbeatable. High focus, zero vanity, immaculate vibe.',
+    focus: 'Recovery & Posture Alignment',
+    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop',
+    rotation: 'rotate-3'
+  },
+  {
+    id: 't-5',
+    name: 'Maxim',
+    role: 'Venture Partner • 38 y.o.',
+    tenure: '2 years of training',
+    quote: 'The 1-on-1 biomechanical coaching transformed how I move. No wasted reps, just measurable physical output.',
+    focus: 'Hypertrophy & Joint Mobility',
+    avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&auto=format&fit=crop',
+    rotation: '-rotate-2'
+  },
+  {
+    id: 't-6',
+    name: 'Sofia',
+    role: 'Architect • 32 y.o.',
+    tenure: 'Member since 2023',
+    quote: 'A sanctuary designed with intentional minimalism. The community and mentors push you far beyond limits.',
+    focus: 'Combat Endurance & Boxing',
+    avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=200&auto=format&fit=crop',
+    rotation: 'rotate-1'
   }
 ];
 

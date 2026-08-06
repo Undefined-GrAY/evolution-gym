@@ -72,18 +72,18 @@ export default function Pricing() {
         </div>
       </ScrollReveal>
 
-      {/* 4 Pricing Cards Grid matching input_file_2.png */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+      {/* Subscription Cards Flex Wrapping Container at < xl (1280px) for Breathing Space */}
+      <div className="flex flex-wrap xl:flex-nowrap justify-center gap-8 items-stretch">
         {PRICING_PLANS.map((plan, idx) => {
           const discountMultiplier = billingCycle === 'annual' ? 0.8 : 1;
           const displayPrice = Math.round(plan.priceMonthly * discountMultiplier);
 
           if (plan.isPopular) {
-            // Featured Dark Card for TRANSIT (matching input_file_2.png)
+            // Featured Dark Card for TRANSIT
             return (
-              <ScrollReveal key={plan.id} delay={0.15 * idx}>
-                <div className="bg-[#2A2A2D] text-white p-8 rounded-[2.5rem] flex flex-col justify-between relative shadow-2xl scale-105 border-2 border-white/20 z-10 h-full">
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-white text-[#2A2A2D] text-[10px] font-black uppercase tracking-widest px-4 py-1 rounded-full shadow-md">
+              <ScrollReveal key={plan.id} delay={0.1 * idx} className="w-full md:w-[calc(50%-16px)] xl:w-1/4 flex">
+                <div className="bg-[#2A2A2D] text-white p-8 sm:p-10 rounded-[2.5rem] flex flex-col justify-between relative shadow-2xl scale-105 border-2 border-white/20 z-10 w-full">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-white text-[#2A2A2D] text-[10px] font-black uppercase tracking-widest px-4 py-1 rounded-full shadow-md whitespace-nowrap">
                     Most Popular Choice
                   </div>
 
@@ -133,8 +133,8 @@ export default function Pricing() {
           }
 
           return (
-            <ScrollReveal key={plan.id} delay={0.1 * idx}>
-              <div className="bg-white text-[#2A2A2D] p-8 rounded-[2.5rem] border border-gray-200 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all h-full">
+            <ScrollReveal key={plan.id} delay={0.1 * idx} className="w-full md:w-[calc(50%-16px)] xl:w-1/4 flex">
+              <div className="bg-white text-[#2A2A2D] p-8 sm:p-10 rounded-[2.5rem] border border-gray-200 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all w-full">
                 <div>
                   <div className="text-center mb-6">
                     <h3 className="text-3xl font-extrabold uppercase font-[#Space_Grotesk] mb-1">

@@ -1,19 +1,53 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { TESTIMONIALS } from '@/lib/data';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 
 export default function Testimonials() {
   const [activeIdx, setActiveIdx] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  const nextTestimonial = () => {
-    setActiveIdx((prev) => (prev + 1) % TESTIMONIALS.length);
+  const slideRight = () => {
+    if (!containerRef.current) return;
+    const container = containerRef.current;
+    const firstCard = container.firstElementChild as HTMLElement | null;
+    const cardWidth = firstCard ? firstCard.clientWidth + 24 : 380; // card width + gap
+
+    const isAtEnd = container.scrollLeft + container.clientWidth >= container.scrollWidth - 30;
+    if (isAtEnd) {
+      container.scrollTo({ left: 0, behavior: 'smooth' });
+      setActiveIdx(0);
+    } else {
+      container.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      setActiveIdx((prev) => (prev + 1) % TESTIMONIALS.length);
+    }
   };
 
-  const prevTestimonial = () => {
-    setActiveIdx((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
+  const slideLeft = () => {
+    if (!containerRef.current) return;
+    const container = containerRef.current;
+    const firstCard = container.firstElementChild as HTMLElement | null;
+    const cardWidth = firstCard ? firstCard.clientWidth + 24 : 380;
+
+    const isAtStart = container.scrollLeft <= 15;
+    if (isAtStart) {
+      container.scrollTo({ left: container.scrollWidth, behavior: 'smooth' });
+      setActiveIdx(TESTIMONIALS.length - 1);
+    } else {
+      container.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+      setActiveIdx((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
+    }
+  };
+
+  const selectCard = (idx: number) => {
+    setActiveIdx(idx);
+    if (!containerRef.current) return;
+    const container = containerRef.current;
+    const firstCard = container.firstElementChild as HTMLElement | null;
+    const cardWidth = firstCard ? firstCard.clientWidth + 24 : 380;
+    container.scrollTo({ left: idx * cardWidth, behavior: 'smooth' });
   };
 
   return (
@@ -21,7 +55,7 @@ export default function Testimonials() {
       <ScrollReveal>
         <div className="max-w-7xl mx-auto px-6 sm:px-12 text-center mb-16">
           <span className="text-xs font-bold uppercase tracking-widest text-[#475470] block mb-3">
-            (9) Authentic Member Feedback
+            ({TESTIMONIALS.length}) Authentic Member Feedback
           </span>
           <h2 className="fluid-h2 font-black uppercase text-[#2A2A2D] tracking-tight max-w-4xl mx-auto font-[#Space_Grotesk] leading-none">
             VOICES OF MEMBERS WHO VALUE QUALITY OVER COMPROMISE
@@ -32,19 +66,22 @@ export default function Testimonials() {
       {/* Curved Fan Carousel matching input_file_4.png */}
       <ScrollReveal delay={0.15}>
         <div className="max-w-7xl mx-auto px-6 sm:px-12 relative">
-          <div className="flex gap-6 overflow-x-auto pb-12 pt-6 snap-x snap-mandatory hide-scrollbar justify-center items-center">
+          <div
+            ref={containerRef}
+            className="flex gap-6 overflow-x-auto pb-12 pt-6 snap-x snap-mandatory hide-scrollbar justify-start items-center scroll-smooth px-2"
+          >
             {TESTIMONIALS.map((t, idx) => {
               const isCurrent = idx === activeIdx;
               return (
                 <div
                   key={t.id}
-                  onClick={() => setActiveIdx(idx)}
-                  className={`min-w-[340px] sm:min-w-[420px] bg-[#E4E8F1] p-8 sm:p-10 rounded-[2.5rem] snap-center flex flex-col justify-between shadow-xl cursor-pointer transition-all duration-500 transform ${
+                  onClick={() => selectCard(idx)}
+                  className={`min-w-[320px] sm:min-w-[420px] bg-[#E4E8F1] p-8 sm:p-10 rounded-[2.5rem] snap-start flex flex-col justify-between shadow-xl cursor-pointer transition-all duration-500 transform ${
                     t.rotation
-                  } ${isCurrent ? 'scale-105 bg-white border-2 border-[#475470] shadow-2xl -rotate-0' : 'opacity-85 hover:opacity-100'}`}
+                  } ${isCurrent ? 'scale-105 bg-white border-2 border-[#475470] shadow-2xl -rotate-0 z-10' : 'opacity-85 hover:opacity-100'}`}
                 >
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#475470]/30 flex-shrink-0">
+                    <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#475470]/30">
                       <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
                     </div>
                     <div>
@@ -73,31 +110,36 @@ export default function Testimonials() {
             })}
           </div>
 
-          {/* Carousel Navigation Buttons matching input_file_4.png bottom controls */}
+          {/* Carousel Navigation Controls */}
           <div className="flex justify-center items-center gap-4 mt-6">
             <button
               type="button"
-              onClick={prevTestimonial}
-              className="w-12 h-12 rounded-full bg-[#E4E8F1] hover:bg-[#475470] text-[#2A2A2D] hover:text-white flex items-center justify-center transition-colors shadow-md cursor-pointer active:scale-95"
-              aria-label="Previous Testimonial"
+              onClick={slideLeft}
+              className="w-12 h-12 rounded-full bg-[#E4E8F1] hover:bg-[#475470] text-[#2A2A2D] hover:text-white flex items-center justify-center transition-all shadow-md cursor-pointer active:scale-90"
+              aria-label="Previous Testimonial Card"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
+
             <div className="flex items-center gap-2">
               {TESTIMONIALS.map((_, i) => (
-                <span
+                <button
                   key={i}
-                  className={`h-2 rounded-full transition-all ${
-                    i === activeIdx ? 'w-8 bg-[#475470]' : 'w-2 bg-[#E4E8F1]'
+                  type="button"
+                  onClick={() => selectCard(i)}
+                  className={`h-2 rounded-full transition-all cursor-pointer ${
+                    i === activeIdx ? 'w-8 bg-[#475470]' : 'w-2 bg-[#E4E8F1] hover:bg-[#63739A]'
                   }`}
+                  aria-label={`Go to testimonial ${i + 1}`}
                 />
               ))}
             </div>
+
             <button
               type="button"
-              onClick={nextTestimonial}
-              className="w-12 h-12 rounded-full bg-[#E4E8F1] hover:bg-[#475470] text-[#2A2A2D] hover:text-white flex items-center justify-center transition-colors shadow-md cursor-pointer active:scale-95"
-              aria-label="Next Testimonial"
+              onClick={slideRight}
+              className="w-12 h-12 rounded-full bg-[#E4E8F1] hover:bg-[#475470] text-[#2A2A2D] hover:text-white flex items-center justify-center transition-all shadow-md cursor-pointer active:scale-90"
+              aria-label="Next Testimonial Card"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
