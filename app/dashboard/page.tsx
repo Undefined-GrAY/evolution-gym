@@ -30,7 +30,7 @@ export default function DashboardPage() {
             <Sparkles className="w-3.5 h-3.5 text-[#637304]" />
             <span>Member Portal</span>
           </div>
-          <h1 className="fluid-h1 font-black uppercase text-[#2A2A2D] tracking-tight font-[#Space_Grotesk]">
+          <h1 className="fluid-h2 font-black uppercase text-[#2A2A2D] tracking-tight font-[#Space_Grotesk]">
             Welcome, {user.name}
           </h1>
           <p className="text-xs text-[#63739A] uppercase tracking-widest font-semibold mt-1">

@@ -13,7 +13,7 @@ export default function TrainersPage() {
           <Sparkles className="w-3.5 h-3.5 text-[#637304]" />
           <span>Architects of Your Form</span>
         </div>
-        <h1 className="fluid-h1 font-black uppercase text-[#2A2A2D] tracking-tight font-[#Space_Grotesk] mb-4">
+        <h1 className="fluid-h2 font-black uppercase text-[#2A2A2D] tracking-tight font-[#Space_Grotesk] mb-4">
           Our Elite Mentors
         </h1>
         <p className="fluid-body-lg text-[#171C22]/75 max-w-2xl font-light">

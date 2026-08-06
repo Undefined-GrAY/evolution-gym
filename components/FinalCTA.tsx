@@ -14,7 +14,7 @@ export default function FinalCTA() {
             <span>Begin Your Transformation Today</span>
           </div>
 
-          <h2 className="fluid-h1 font-black uppercase text-[#2A2A2D] tracking-tight leading-none mb-8 font-[#Space_Grotesk]">
+          <h2 className="fluid-h2 font-black uppercase text-[#2A2A2D] tracking-tight leading-none mb-8 font-[#Space_Grotesk]">
             READY TO EVOLVE?
           </h2>
 

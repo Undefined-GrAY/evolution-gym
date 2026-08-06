@@ -17,7 +17,7 @@ export default function AestheticsOne() {
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Aesthetics & Precision — 01</span>
               </div>
-              <h2 className="fluid-h1 font-black uppercase text-[#2A2A2D] tracking-tight leading-none mb-6 font-[#Space_Grotesk]">
+              <h2 className="fluid-h2 font-black uppercase text-[#2A2A2D] tracking-tight leading-none mb-6 font-[#Space_Grotesk]">
                 ANATOMICAL MASTERCLASS
               </h2>
             </ScrollReveal>

@@ -30,7 +30,7 @@ export default function AestheticsTwo() {
             <span className="text-xs uppercase tracking-widest text-[#63739A] font-extrabold block mb-3">
               Aesthetics & Architecture — 02
             </span>
-            <h2 className="fluid-h1 font-black uppercase tracking-tight font-[#Space_Grotesk] mb-4">
+            <h2 className="fluid-h2 font-black uppercase tracking-tight font-[#Space_Grotesk] mb-4">
               RECOVERY ENGINEERING
             </h2>
             <p className="fluid-body-lg text-white/70 font-light">

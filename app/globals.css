@@ -30,9 +30,9 @@
     letter-spacing: -0.03em;
   }
   .fluid-h2 {
-    font-size: clamp(1.75rem, 3.5cqw + 1rem, 3.75rem);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
+    font-size: clamp(1.75rem, 4cqw + 0.8rem, 4rem);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
   }
   .fluid-h3 {
     font-size: clamp(1.35rem, 2cqw + 0.9rem, 2.5rem);

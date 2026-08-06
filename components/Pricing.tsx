@@ -18,7 +18,7 @@ export default function Pricing() {
             <span className="text-xs uppercase tracking-widest text-[#475470] font-extrabold block mb-2">
               Membership Tiers
             </span>
-            <h2 className="fluid-h1 font-black uppercase text-[#2A2A2D] tracking-tight font-[#Space_Grotesk] leading-none">
+            <h2 className="fluid-h2 font-black uppercase text-[#2A2A2D] tracking-tight font-[#Space_Grotesk] leading-none">
               SUBSCRIBE TO CHANGES
             </h2>
           </div>

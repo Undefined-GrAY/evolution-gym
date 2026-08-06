@@ -17,7 +17,7 @@ export default function TrainerSpotlight() {
               <span className="text-xs uppercase tracking-widest text-[#63739A] font-extrabold block mb-2">
                 Architects of Your Form
               </span>
-              <h2 className="fluid-h1 font-black uppercase tracking-tight leading-none font-[#Space_Grotesk]">
+              <h2 className="fluid-h2 font-black uppercase tracking-tight leading-none font-[#Space_Grotesk]">
                 Our Mentors
               </h2>
             </div>

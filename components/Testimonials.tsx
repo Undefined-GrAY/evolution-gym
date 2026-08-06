@@ -23,7 +23,7 @@ export default function Testimonials() {
           <span className="text-xs font-bold uppercase tracking-widest text-[#475470] block mb-3">
             (9) Authentic Member Feedback
           </span>
-          <h2 className="fluid-h1 font-black uppercase text-[#2A2A2D] tracking-tight max-w-4xl mx-auto font-[#Space_Grotesk] leading-none">
+          <h2 className="fluid-h2 font-black uppercase text-[#2A2A2D] tracking-tight max-w-4xl mx-auto font-[#Space_Grotesk] leading-none">
             VOICES OF MEMBERS WHO VALUE QUALITY OVER COMPROMISE
           </h2>
         </div>
