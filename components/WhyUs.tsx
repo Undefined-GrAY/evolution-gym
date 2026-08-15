@@ -84,14 +84,14 @@ export default function WhyUs() {
               {highlights.map((h, i) => (
                 <ScrollReveal key={i} delay={0.1 * i} y={15}>
                   <div className="border-t lg:border-t-0 border-white/25 pt-3 sm:pt-6">
-                    <span className="text-3xl sm:text-5xl font-black font-[#Space_Grotesk] block mb-1 text-white">
+                    <span className="text-3xl sm:text-5xl font-bold font-[#Space_Grotesk] block mb-1 text-white">
                       <CounterValue
                         targetNumber={h.targetNumber}
                         suffix={h.suffix}
                         staticText={h.staticText}
                       />
                     </span>
-                    <h3 className="text-[13px] md:font-semibold lg:font-extrabold uppercase tracking-wider text-white/90 mb-1 leading-tight">
+                    <h3 className="text-[13px] font-medium md:font-semibold lg:font-extrabold uppercase tracking-wider text-white/90 mb-1 leading-tight">
                       {h.label}
                     </h3>
                     <p className="text-xs text-white/70 font-light hidden sm:block">
