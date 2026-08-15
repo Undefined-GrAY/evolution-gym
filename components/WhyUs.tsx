@@ -84,7 +84,7 @@ export default function WhyUs() {
               {highlights.map((h, i) => (
                 <ScrollReveal key={i} delay={0.1 * i} y={15}>
                   <div className="border-t lg:border-t-0 border-white/25 pt-3 sm:pt-6">
-                    <span className="text-3xl sm:text-5xl font-bold font-[#Space_Grotesk] block mb-1 text-white">
+                    <span className="text-3xl sm:text-5xl font-bold md:font-extrabold font-[#Space_Grotesk] block mb-1 text-white">
                       <CounterValue
                         targetNumber={h.targetNumber}
                         suffix={h.suffix}
