@@ -51,10 +51,10 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-28 bg-white text-[#2A2A2D] w-full overflow-hidden border-t border-gray-100">
+    <section className="py-16 sm:py-24 bg-white text-[#2A2A2D] w-full overflow-hidden border-t border-gray-100">
       <ScrollReveal>
-        <div className="max-w-7xl mx-auto px-6 sm:px-12 text-center mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#475470] block mb-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-12 text-center mb-12 sm:mb-16">
+          <span className="text-[13px] font-bold uppercase tracking-widest text-[#475470] block mb-3">
             ({TESTIMONIALS.length}) Authentic Member Feedback
           </span>
           <h2 className="fluid-h2 font-black uppercase text-[#2A2A2D] tracking-tight max-w-4xl mx-auto font-[#Space_Grotesk] leading-none">
@@ -63,12 +63,12 @@ export default function Testimonials() {
         </div>
       </ScrollReveal>
 
-      {/* Curved Fan Carousel matching input_file_4.png */}
+      {/* Curved Fan Carousel */}
       <ScrollReveal delay={0.15}>
-        <div className="max-w-7xl mx-auto px-6 sm:px-12 relative">
+        <div className="w-full max-w-7xl mx-auto px-0 sm:px-12 relative">
           <div
             ref={containerRef}
-            className="flex gap-6 overflow-x-auto pb-12 pt-6 snap-x snap-mandatory hide-scrollbar justify-start items-center scroll-smooth px-2"
+            className="flex gap-4 sm:gap-6 overflow-x-auto pb-12 pt-6 snap-x snap-mandatory hide-scrollbar justify-start items-center scroll-smooth px-4 sm:px-2"
           >
             {TESTIMONIALS.map((t, idx) => {
               const isCurrent = idx === activeIdx;
@@ -76,16 +76,16 @@ export default function Testimonials() {
                 <div
                   key={t.id}
                   onClick={() => selectCard(idx)}
-                  className={`min-w-[320px] sm:min-w-[420px] bg-[#E4E8F1] p-8 sm:p-10 rounded-[2.5rem] snap-start flex flex-col justify-between shadow-xl cursor-pointer transition-all duration-500 transform ${
+                  className={`w-[85vw] max-w-[360px] sm:min-w-[420px] bg-[#E4E8F1] p-6 sm:p-10 rounded-[2.5rem] snap-start flex-shrink-0 flex flex-col justify-between shadow-xl cursor-pointer transition-all duration-500 transform ${
                     t.rotation
                   } ${isCurrent ? 'scale-105 bg-white border-2 border-[#475470] shadow-2xl -rotate-0 z-10' : 'opacity-85 hover:opacity-100'}`}
                 >
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#475470]/30">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden border-2 border-[#475470]/30 flex-shrink-0">
                       <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold font-[#Space_Grotesk] text-[#2A2A2D]">
+                      <h3 className="text-xl sm:text-2xl font-bold font-[#Space_Grotesk] text-[#2A2A2D]">
                         {t.name}
                       </h3>
                       <p className="text-xs text-[#475470] font-medium leading-tight">
@@ -100,7 +100,7 @@ export default function Testimonials() {
                     <p className="text-sm sm:text-base text-[#2A2A2D]/90 italic font-light leading-relaxed mb-6">
                       "{t.quote}"
                     </p>
-                    <div className="border-t border-[#475470]/20 pt-4 flex justify-between items-center text-[10px] font-bold uppercase tracking-widest text-[#475470]">
+                    <div className="border-t border-[#475470]/20 pt-4 flex justify-between items-center text-[13px] font-bold uppercase tracking-widest text-[#475470]">
                       <span>FOCUS: {t.focus}</span>
                       <span>Verified Member</span>
                     </div>

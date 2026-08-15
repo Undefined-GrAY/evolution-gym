@@ -6,7 +6,7 @@ import { ArrowRight, Play, Users, Star } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-screen flex flex-col items-center justify-between overflow-hidden bg-black text-white pt-32 pb-16">
+    <section className="relative w-full min-h-[85svh] md:min-h-screen flex flex-col items-center justify-between overflow-hidden bg-black text-white pt-28 md:pt-32 pb-12 md:pb-16 container-fluid">
       {/* Full Bleed Media Background */}
       <div className="absolute inset-0 z-0">
         <img
@@ -25,8 +25,8 @@ export default function Hero() {
         </h1>
       </div>
 
-      {/* Top Floating Video Teaser & Social Proof Badge Overlay */}
-      <div className="relative z-10 max-w-7xl w-full px-6 sm:px-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mt-4">
+      {/* Desktop Floating Video Teaser & Social Proof Badge Overlay (Hidden on Mobile for Intentional Whitespace) */}
+      <div className="hidden md:flex relative z-10 max-w-7xl w-full px-6 sm:px-12 justify-between items-center gap-6 mt-4">
         {/* Floating Active Member Badge */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -53,7 +53,7 @@ export default function Hero() {
           </div>
           <div>
             <div className="text-xs font-black uppercase tracking-wider text-white">23K+ Members</div>
-            <div className="text-[10px] text-white/70 uppercase">Join Our Movement</div>
+            <div className="text-[13px] text-white/70 uppercase">Join Our Movement</div>
           </div>
         </motion.div>
 
@@ -76,7 +76,7 @@ export default function Hero() {
             </div>
           </div>
           <div className="pr-2">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-[#63739A] block">
+            <span className="text-[13px] font-bold uppercase tracking-widest text-[#63739A] block">
               Facility Tour
             </span>
             <span className="text-xs font-bold uppercase tracking-tight text-white block">
@@ -87,12 +87,12 @@ export default function Hero() {
       </div>
 
       {/* Main Hero Center Content */}
-      <div className="relative z-10 max-w-5xl mx-auto w-full px-6 text-center my-auto flex flex-col items-center gap-6">
+      <div className="relative z-10 max-w-5xl mx-auto w-full px-4 sm:px-6 text-center my-auto flex flex-col items-center gap-6 py-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-1.5 rounded-full text-xs uppercase tracking-widest text-white/90 font-semibold mb-2"
+          className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-1.5 rounded-full text-[13px] uppercase tracking-widest text-white/90 font-semibold mb-2"
         >
           <Star className="w-3.5 h-3.5 text-[#637304] fill-[#637304]" />
           <span>Boutique Conscious Fitness</span>
@@ -122,18 +122,18 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center gap-4 mt-6"
+          className="flex flex-col sm:flex-row items-center gap-4 mt-6 w-full sm:w-auto"
         >
           <button
             onClick={() => store.setTrialModalOpen(true)}
-            className="bg-white text-[#2A2A2D] hover:bg-[#E4E8F1] transition-all duration-300 px-8 py-4 rounded-full font-bold text-xs uppercase tracking-widest flex items-center gap-3 shadow-2xl group hover:scale-105"
+            className="w-full sm:w-auto bg-white text-[#2A2A2D] hover:bg-[#E4E8F1] transition-all duration-300 px-8 py-4 rounded-full font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-3 shadow-2xl group hover:scale-105 cursor-pointer"
           >
             <span>Book a free trial class</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
           <a
             href="#categories"
-            className="bg-white/10 backdrop-blur-md hover:bg-white/20 text-white border border-white/20 transition-all duration-300 px-8 py-4 rounded-full font-semibold text-xs uppercase tracking-widest"
+            className="w-full sm:w-auto text-center bg-white/10 backdrop-blur-md hover:bg-white/20 text-white border border-white/20 transition-all duration-300 px-8 py-4 rounded-full font-semibold text-xs uppercase tracking-widest cursor-pointer"
           >
             Explore Services
           </a>

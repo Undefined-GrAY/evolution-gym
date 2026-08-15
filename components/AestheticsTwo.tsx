@@ -23,12 +23,12 @@ export default function AestheticsTwo() {
   ];
 
   return (
-    <section className="py-24 bg-[#151618] text-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 sm:px-12 relative z-10">
+    <section className="py-16 sm:py-24 bg-[#151618] text-white relative overflow-hidden container-fluid">
+      <div className="max-w-7xl mx-auto px-4 sm:px-12 relative z-10">
         <ScrollReveal>
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs uppercase tracking-widest text-[#63739A] font-extrabold block mb-3">
-              Aesthetics & Architecture — 02
+            <span className="text-[13px] uppercase tracking-widest text-[#63739A] font-extrabold block mb-3">
+              Aesthetics & Architecture : 02
             </span>
             <h2 className="fluid-h2 font-black uppercase tracking-tight font-[#Space_Grotesk] mb-4">
               RECOVERY ENGINEERING

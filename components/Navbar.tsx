@@ -40,9 +40,9 @@ export default function Navbar() {
       <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 pointer-events-none py-4 px-4 sm:px-8">
         <div className="max-w-7xl mx-auto flex items-center justify-between pointer-events-auto">
 
-          {/* DESKTOP NAV BAR */}
+          {/* DESKTOP NAV BAR (Visible at 1024px+ lg) */}
           <nav
-            className={`hidden md:flex items-center justify-between w-full mx-auto transition-all duration-500 ${
+            className={`hidden lg:flex items-center justify-between w-full mx-auto transition-all duration-500 ${
               isScrolled
                 ? 'bg-[#2A2A2D]/90 backdrop-blur-xl border border-white/20 text-white rounded-full px-8 py-3.5 shadow-2xl max-w-5xl'
                 : isHomepage
@@ -64,7 +64,7 @@ export default function Navbar() {
             </Link>
 
             {/* Navigation Links */}
-            <ul className="flex items-center gap-1 lg:gap-2 text-xs font-semibold uppercase tracking-wider">
+            <ul className="flex items-center gap-1.5 text-[13px] font-semibold uppercase tracking-wider">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 const label = isScrolled ? link.shortName : link.name;
@@ -96,9 +96,9 @@ export default function Navbar() {
             </button>
           </nav>
 
-          {/* MOBILE NAV BAR (Logo on Left, Fancy Menu Button on Right ONLY) */}
-          <nav className="flex md:hidden items-center justify-between w-full bg-[#2A2A2D]/95 backdrop-blur-xl border border-white/20 text-white rounded-full px-5 py-3 shadow-2xl">
-            {/* ONLY BRAND NAME LOGO */}
+          {/* MOBILE & TABLET NAV BAR (Visible below 1024px) */}
+          <nav className="flex lg:hidden items-center justify-between w-full bg-[#2A2A2D]/95 backdrop-blur-xl border border-white/20 text-white rounded-full px-5 py-3 shadow-2xl">
+            {/* BRAND NAME LOGO */}
             <Link href="/" className="text-base tracking-widest font-black uppercase text-white flex items-center gap-2 cursor-pointer">
               <span className="bg-white text-[#2A2A2D] w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">
                 E
@@ -120,7 +120,7 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* MOBILE FULL-SCREEN MENU DRAWER */}
+      {/* MOBILE & TABLET FULL-SCREEN MENU DRAWER */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
@@ -128,7 +128,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-50 bg-[#151618]/98 backdrop-blur-2xl text-white flex flex-col justify-between p-8 pt-28 md:hidden"
+            className="fixed inset-0 z-50 bg-[#151618]/98 backdrop-blur-2xl text-white flex flex-col justify-between p-8 pt-28 lg:hidden"
           >
             <div className="flex flex-col gap-6">
               <div className="text-xs uppercase tracking-widest text-[#63739A] font-bold border-b border-white/10 pb-4 flex justify-between items-center">

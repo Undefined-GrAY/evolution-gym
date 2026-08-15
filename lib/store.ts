@@ -41,6 +41,7 @@ let currentUser: UserProfile = {
 };
 
 let isTrialModalOpen = false;
+let isPhilosophyModalOpen = false;
 let selectedClassForBooking: ClassItem | null = null;
 
 const listeners: Set<Listener> = new Set();
@@ -75,6 +76,15 @@ export const store = {
 
   setTrialModalOpen(open: boolean) {
     isTrialModalOpen = open;
+    notify();
+  },
+
+  getIsPhilosophyModalOpen(): boolean {
+    return isPhilosophyModalOpen;
+  },
+
+  setPhilosophyModalOpen(open: boolean) {
+    isPhilosophyModalOpen = open;
     notify();
   },
 

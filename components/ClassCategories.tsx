@@ -56,11 +56,11 @@ export default function ClassCategories() {
   ];
 
   return (
-    <section id="categories" className="px-6 sm:px-12 max-w-7xl mx-auto w-full py-24">
+    <section id="categories" className="container-fluid py-16 sm:py-24">
       <ScrollReveal>
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
           <div>
-            <span className="text-xs uppercase tracking-widest font-extrabold text-[#475470] block mb-2">
+            <span className="text-[13px] uppercase tracking-widest font-extrabold text-[#475470] block mb-2">
               Curated Discipline
             </span>
             <h2 className="fluid-h2 font-black uppercase text-[#2A2A2D] tracking-tight font-[#Space_Grotesk]">
@@ -69,7 +69,7 @@ export default function ClassCategories() {
           </div>
           <Link
             href="/classes"
-            className="text-xs font-bold uppercase tracking-widest text-[#475470] hover:text-[#2A2A2D] flex items-center gap-1 group cursor-pointer"
+            className="text-[13px] font-bold uppercase tracking-widest text-[#475470] hover:text-[#2A2A2D] flex items-center gap-1 group cursor-pointer"
           >
             <span>Explore All Schedules</span>
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -103,7 +103,7 @@ export default function ClassCategories() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
                     <div className="relative z-10">
-                      <span className="text-xs uppercase tracking-widest text-white/70 font-semibold mb-1 block">
+                      <span className="text-[13px] uppercase tracking-widest text-white/70 font-semibold mb-1 block">
                         {cat.subtitle}
                       </span>
                       <h3 className="text-3xl font-extrabold uppercase font-[#Space_Grotesk] mb-3 text-white">
@@ -114,7 +114,7 @@ export default function ClassCategories() {
                       </p>
                       <Link
                         href={`/classes?category=${cat.id}`}
-                        className="inline-flex items-center gap-2 bg-white text-[#2A2A2D] px-5 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-widest hover:bg-[#E4E8F1] transition-colors cursor-pointer"
+                        className="inline-flex items-center gap-2 bg-white text-[#2A2A2D] px-5 py-2.5 rounded-full text-[13px] font-extrabold uppercase tracking-widest hover:bg-[#E4E8F1] transition-colors cursor-pointer"
                       >
                         <span>Book Slot</span>
                         <ArrowUpRight className="w-3.5 h-3.5" />
@@ -137,9 +137,9 @@ export default function ClassCategories() {
         </div>
       </ScrollReveal>
 
-      {/* Mobile Stacked Card View */}
+      {/* Mobile Stacked Card View (3 Cards Limit for Mobile Teaser per SKILL.md) */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:hidden">
-        {categories.slice(0, 4).map((cat, idx) => (
+        {categories.slice(0, 3).map((cat, idx) => (
           <ScrollReveal key={cat.id} delay={idx * 0.08}>
             <div
               onClick={() => store.setTrialModalOpen(true)}
@@ -152,7 +152,7 @@ export default function ClassCategories() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
               <div className="relative z-10">
-                <span className="text-[10px] uppercase tracking-widest text-white/70 font-semibold block mb-1">
+                <span className="text-[13px] uppercase tracking-widest text-white/70 font-semibold block mb-1">
                   {cat.subtitle}
                 </span>
                 <h3 className="text-2xl font-bold uppercase font-[#Space_Grotesk] mb-2 text-white">
@@ -167,7 +167,7 @@ export default function ClassCategories() {
                     e.stopPropagation();
                     store.setTrialModalOpen(true);
                   }}
-                  className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-widest text-white hover:underline cursor-pointer"
+                  className="inline-flex items-center gap-1 text-[13px] font-bold uppercase tracking-widest text-white hover:underline cursor-pointer"
                 >
                   <span>Select Category</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />

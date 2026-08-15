@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import TrialModal from "@/components/TrialModal";
 import BookingModal from "@/components/BookingModal";
+import PhilosophyModal from "@/components/PhilosophyModal";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -35,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} scroll-smooth h-full antialiased`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${inter.variable} ${spaceGrotesk.variable} scroll-smooth h-full antialiased`}>
       <head>
         <link
           rel="stylesheet"
@@ -48,6 +49,7 @@ export default function RootLayout({
         <Footer />
         <TrialModal />
         <BookingModal />
+        <PhilosophyModal />
       </body>
     </html>
   );

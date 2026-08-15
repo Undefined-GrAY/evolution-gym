@@ -6,16 +6,16 @@ import ScrollReveal from './ScrollReveal';
 
 export default function AestheticsOne() {
   return (
-    <section className="relative w-full py-28 bg-[#F8F9FF] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 sm:px-12 relative z-10">
+    <section className="relative w-full py-16 sm:py-24 bg-[#F8F9FF] overflow-hidden container-fluid">
+      <div className="max-w-7xl mx-auto px-4 sm:px-12 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
 
           {/* Left Column: Copy & Details */}
           <div className="flex-1 max-w-xl">
             <ScrollReveal>
-              <div className="inline-flex items-center gap-2 bg-[#E4E8F1] px-4 py-1.5 rounded-full text-xs uppercase tracking-widest text-[#475470] font-bold mb-6">
+              <div className="inline-flex items-center gap-2 bg-[#E4E8F1] px-4 py-1.5 rounded-full text-[13px] uppercase tracking-widest text-[#475470] font-bold mb-6">
                 <Sparkles className="w-3.5 h-3.5" />
-                <span>Aesthetics & Precision — 01</span>
+                <span>Aesthetics & Precision : 01</span>
               </div>
               <h2 className="fluid-h2 font-black uppercase text-[#2A2A2D] tracking-tight leading-none mb-6 font-[#Space_Grotesk]">
                 ANATOMICAL MASTERCLASS

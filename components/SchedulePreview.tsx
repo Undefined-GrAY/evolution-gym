@@ -19,10 +19,10 @@ export default function SchedulePreview() {
   }, []);
 
   return (
-    <section className="px-6 sm:px-12 max-w-7xl mx-auto w-full py-20">
+    <section className="container-fluid py-16 sm:py-20">
       <ScrollReveal>
-        <div className="bg-[#E4E8F1] rounded-[2.5rem] p-8 sm:p-14 text-center">
-          <span className="text-xs uppercase tracking-widest text-[#475470] font-extrabold block mb-2">
+        <div className="bg-[#E4E8F1] rounded-[2.5rem] p-6 sm:p-14 text-center">
+          <span className="text-[13px] uppercase tracking-widest text-[#475470] font-extrabold block mb-2">
             Realtime Slot Availability
           </span>
           <h2 className="fluid-h2 font-black uppercase text-[#2A2A2D] tracking-tight font-[#Space_Grotesk] mb-4">
@@ -42,7 +42,7 @@ export default function SchedulePreview() {
                       <span className="flex items-center gap-1.5">
                         <Clock className="w-3.5 h-3.5 text-[#475470]" /> {item.time}
                       </span>
-                      <span className="bg-[#E4E8F1] text-[#2A2A2D] px-2.5 py-0.5 rounded-full text-[10px]">
+                      <span className="bg-[#E4E8F1] text-[#2A2A2D] px-2.5 py-0.5 rounded-full text-[13px]">
                         {item.duration}
                       </span>
                     </div>
