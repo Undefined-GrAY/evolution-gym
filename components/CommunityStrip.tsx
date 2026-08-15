@@ -2,10 +2,10 @@
 
 export default function CommunityStrip() {
   const images = [
-    { url: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=800&auto=format&fit=crop', title: 'Strength Rituals' },
-    { url: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop', title: 'Biomechanical Gear' },
-    { url: 'https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=800&auto=format&fit=crop', title: 'Combat Performance' },
-    { url: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=800&auto=format&fit=crop', title: 'Thermal Recovery' }
+    { url: '/images/hero-bg.jpg', title: 'Strength Rituals' },
+    { url: '/images/equipment.jpg', title: 'Biomechanical Gear' },
+    { url: '/images/boxing.jpg', title: 'Combat Performance' },
+    { url: '/images/recovery.jpg', title: 'Thermal Recovery' }
   ];
 
   return (

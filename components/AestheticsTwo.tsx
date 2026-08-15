@@ -66,7 +66,7 @@ export default function AestheticsTwo() {
           <ScrollReveal delay={0.15}>
             <div className="relative rounded-3xl overflow-hidden h-[340px] group border border-white/10">
               <img
-                src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1000&auto=format&fit=crop"
+                src="/images/recovery.jpg"
                 alt="Thermal Spa Recovery Chamber"
                 className="w-full h-full object-cover filter contrast-110 group-hover:scale-105 transition-transform duration-700"
               />
@@ -85,7 +85,7 @@ export default function AestheticsTwo() {
           <ScrollReveal delay={0.25}>
             <div className="relative rounded-3xl overflow-hidden h-[340px] group border border-white/10">
               <img
-                src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=1000&auto=format&fit=crop"
+                src="/images/equipment.jpg"
                 alt="Minimalist Gym Architecture"
                 className="w-full h-full object-cover filter contrast-110 group-hover:scale-105 transition-transform duration-700"
               />

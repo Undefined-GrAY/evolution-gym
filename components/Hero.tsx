@@ -10,7 +10,7 @@ export default function Hero() {
       {/* Full Bleed Media Background */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=2000&auto=format&fit=crop"
+          src="/images/hero-bg.jpg"
           alt="Atmospheric athletic athlete training"
           className="w-full h-full object-cover object-center opacity-45 scale-105 filter grayscale contrast-125"
         />
@@ -18,8 +18,8 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-transparent to-black/80" />
       </div>
 
-      {/* Giant Background Wordmark "EVOLUTION" (Constrained to max-w-[1440px]) */}
-      <div className="absolute bottom-8 [@media(min-height:740px)]:bottom-14 left-1/2 -translate-x-1/2 w-full max-w-[1440px] overflow-hidden flex justify-center pointer-events-none select-none z-0 px-6 sm:px-12">
+      {/* Giant Background Wordmark "EVOLUTION" (Fills 100% width on smaller screens, capped at max-w-[1440px]) */}
+      <div className="absolute bottom-8 [@media(min-height:740px)]:bottom-14 left-1/2 -translate-x-1/2 w-full max-w-[1440px] overflow-hidden flex justify-center pointer-events-none select-none z-0 px-2 sm:px-4">
         <h1 className="wordmark-capped font-black uppercase text-white/10 whitespace-nowrap tracking-tighter translate-y-[20%] font-[#Space_Grotesk]">
           EVOLUTION
         </h1>
@@ -36,17 +36,17 @@ export default function Hero() {
         >
           <div className="flex -space-x-2">
             <img
-              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop"
+              src="/images/avatar-2.jpg"
               className="w-7 h-7 rounded-full border border-white object-cover"
               alt="Member"
             />
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop"
+              src="/images/avatar-1.jpg"
               className="w-7 h-7 rounded-full border border-white object-cover"
               alt="Member"
             />
             <img
-              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop"
+              src="/images/avatar-3.jpg"
               className="w-7 h-7 rounded-full border border-white object-cover"
               alt="Member"
             />
@@ -67,7 +67,7 @@ export default function Hero() {
         >
           <div className="relative w-12 h-12 rounded-xl overflow-hidden bg-black border border-white/20">
             <img
-              src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=200&auto=format&fit=crop"
+              src="/images/equipment.jpg"
               alt="Video Teaser"
               className="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500"
             />

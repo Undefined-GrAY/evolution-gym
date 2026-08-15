@@ -15,42 +15,42 @@ export default function ClassCategories() {
       id: 'yoga',
       title: 'Yoga',
       subtitle: 'Mind & Posture Alignment',
-      image: 'https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=800&auto=format&fit=crop',
+      image: '/images/yoga.jpg',
       desc: 'Synchronize movement with breathwork. Develop somatic awareness, spinal mobility, and inner calm.'
     },
     {
       id: 'group',
       title: 'Group Classes',
       subtitle: 'High Energy Community',
-      image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=800&auto=format&fit=crop',
+      image: '/images/hero-bg.jpg',
       desc: 'Collective motivation in tactical HYROX, HIIT, and endurance conditioning sessions.'
     },
     {
       id: 'personal',
       title: 'Personal Training',
       subtitle: 'Bespoke 1-on-1 Mentorship',
-      image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&auto=format&fit=crop',
+      image: '/images/personal.jpg',
       desc: 'Custom biomechanical programming tailored specifically to your physique goals and recovery bandwidth.'
     },
     {
       id: 'strength',
       title: 'Strength',
       subtitle: 'Power & Functional Muscle',
-      image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1000&auto=format&fit=crop',
+      image: '/images/equipment.jpg',
       desc: 'Refined strength training where technique, strategy, and power meet. Engineered to transform performance.'
     },
     {
       id: 'recovery',
       title: 'Recovery & Mobility',
       subtitle: 'Tissue Release & Thermal SPA',
-      image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=800&auto=format&fit=crop',
+      image: '/images/recovery.jpg',
       desc: 'Active joint decompression, infrared therapy, cold plunge chambers, and guided tissue rehab.'
     },
     {
       id: 'boxing',
       title: 'Boxing',
       subtitle: 'Combat Reflexes & Endurance',
-      image: 'https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=800&auto=format&fit=crop',
+      image: '/images/boxing.jpg',
       desc: 'High-octane technical strike combinations, footwork rhythm, and heavy bag conditioning.'
     }
   ];

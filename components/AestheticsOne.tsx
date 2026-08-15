@@ -47,7 +47,7 @@ export default function AestheticsOne() {
             <ScrollReveal delay={0.2} y={50}>
               <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl border border-black/10 group">
                 <img
-                  src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=1200&auto=format&fit=crop"
+                  src="/images/aesthetics-1.jpg"
                   alt="Athletic posture back stretch monochrome"
                   className="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-700"
                 />

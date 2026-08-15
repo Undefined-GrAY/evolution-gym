@@ -48,7 +48,7 @@ export const INITIAL_CLASSES: ClassItem[] = [
     spotsAvailable: 4,
     time: '08:00 AM',
     day: 'Today',
-    image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop',
+    image: '/images/equipment.jpg',
     description: 'High-intensity barbell work, tactical conditioning, and functional movements engineered to push physical boundaries.'
   },
   {
@@ -63,7 +63,7 @@ export const INITIAL_CLASSES: ClassItem[] = [
     spotsAvailable: 6,
     time: '09:30 AM',
     day: 'Today',
-    image: 'https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=1200&auto=format&fit=crop',
+    image: '/images/yoga.jpg',
     description: 'Deep physical and mental restoration. Synchronize breath with dynamic postural sequences for ultimate balance.'
   },
   {
@@ -78,7 +78,7 @@ export const INITIAL_CLASSES: ClassItem[] = [
     spotsAvailable: 2,
     time: '11:00 AM',
     day: 'Today',
-    image: 'https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=1200&auto=format&fit=crop',
+    image: '/images/boxing.jpg',
     description: 'Sharpen your rhythm, stance, footwork, and strike precision in a high-octane technical boxing session.'
   },
   {
@@ -93,7 +93,7 @@ export const INITIAL_CLASSES: ClassItem[] = [
     spotsAvailable: 5,
     time: '04:00 PM',
     day: 'Today',
-    image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1200&auto=format&fit=crop',
+    image: '/images/recovery.jpg',
     description: 'Focused tissue release, active joint mobility work, and hyperbaric recovery protocols to eliminate soreness.'
   },
   {
@@ -108,7 +108,7 @@ export const INITIAL_CLASSES: ClassItem[] = [
     spotsAvailable: 3,
     time: '05:30 PM',
     day: 'Today',
-    image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1200&auto=format&fit=crop',
+    image: '/images/hero-bg.jpg',
     description: 'Competitive endurance training blending sled pushes, ergs, kettlebell strength, and partner challenges.'
   },
   {
@@ -123,7 +123,7 @@ export const INITIAL_CLASSES: ClassItem[] = [
     spotsAvailable: 1,
     time: '07:00 PM',
     day: 'Today',
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop',
+    image: '/images/personal.jpg',
     description: 'Bespoke personal coaching tailored precisely to your musculoskeletal structure and specific physique goals.'
   }
 ];
@@ -136,7 +136,7 @@ export const TRAINERS: Trainer[] = [
     specialty: 'Powerlifting, Hypertrophy & Biomechanics',
     experience: '12+ Years',
     bio: 'Andriy specializes in personalized training focused on strength, balance, and long-term results. His approach combines precision, discipline, and a deep understanding of body mechanics.',
-    image: 'https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=800&auto=format&fit=crop',
+    image: '/images/trainer-marcus.jpg',
     isFeatured: true
   },
   {
@@ -146,7 +146,7 @@ export const TRAINERS: Trainer[] = [
     specialty: 'Kinesiology & Functional Movement',
     experience: '9 Years',
     bio: 'Emily builds bulletproof joint stability and structural resilience, allowing high performers to train harder without injury.',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop'
+    image: '/images/trainer-elena.jpg',
   },
   {
     id: 'tr-3',
@@ -155,7 +155,7 @@ export const TRAINERS: Trainer[] = [
     specialty: 'Vinyasa, Breathwork & Somatic Release',
     experience: '10 Years',
     bio: 'Olena guides athletes to master physical tension release and high-pressure focus through breath control and dynamic movement.',
-    image: 'https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=800&auto=format&fit=crop'
+    image: '/images/trainer-david.jpg',
   },
   {
     id: 'tr-4',
@@ -164,7 +164,7 @@ export const TRAINERS: Trainer[] = [
     specialty: 'Boxing, Conditioning & Reaction Speed',
     experience: '8 Years',
     bio: 'Former competitive fighter delivering elite tactical boxing sessions designed to build cardiovascular fortitude and sharp mental reflexes.',
-    image: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=800&auto=format&fit=crop'
+    image: '/images/trainer-sophia.jpg'
   }
 ];
 
@@ -239,7 +239,7 @@ export const TESTIMONIALS = [
     tenure: 'Member since 2023',
     quote: 'Not just a gym, but a space where physical strength meets mental balance and genuine support.',
     focus: 'Body Recomposition & Energy',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop',
+    avatar: '/images/avatar-1.jpg',
     rotation: '-rotate-3'
   },
   {
@@ -249,7 +249,7 @@ export const TESTIMONIALS = [
     tenure: '18 months of training',
     quote: 'My trainer helped me reconnect with my body and mind through a deeply personal and thoughtful approach.',
     focus: 'Mental Balance & Posture',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop',
+    avatar: '/images/avatar-2.jpg',
     rotation: 'rotate-2'
   },
   {
@@ -259,7 +259,7 @@ export const TESTIMONIALS = [
     tenure: 'Member since 2023',
     quote: 'Where discipline meets clarity. Training here feels structured, intentional, and deeply personal — elevating both body and mindset.',
     focus: 'Performance & Longevity',
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop',
+    avatar: '/images/avatar-3.jpg',
     rotation: '-rotate-1'
   },
   {
@@ -269,7 +269,7 @@ export const TESTIMONIALS = [
     tenure: 'Member since 2024',
     quote: 'The thermal SPA after high-intensity strength sessions is unbeatable. High focus, zero vanity, immaculate vibe.',
     focus: 'Recovery & Posture Alignment',
-    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop',
+    avatar: '/images/avatar-4.jpg',
     rotation: 'rotate-3'
   },
   {
@@ -279,7 +279,7 @@ export const TESTIMONIALS = [
     tenure: '2 years of training',
     quote: 'The 1-on-1 biomechanical coaching transformed how I move. No wasted reps, just measurable physical output.',
     focus: 'Hypertrophy & Joint Mobility',
-    avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&auto=format&fit=crop',
+    avatar: '/images/avatar-5.jpg',
     rotation: '-rotate-2'
   },
   {
@@ -289,7 +289,7 @@ export const TESTIMONIALS = [
     tenure: 'Member since 2023',
     quote: 'A sanctuary designed with intentional minimalism. The community and mentors push you far beyond limits.',
     focus: 'Combat Endurance & Boxing',
-    avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=200&auto=format&fit=crop',
+    avatar: '/images/avatar-6.jpg',
     rotation: 'rotate-1'
   }
 ];
