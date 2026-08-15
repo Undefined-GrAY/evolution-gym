@@ -14,7 +14,7 @@ export default function Pricing() {
   const mobilePlans = PRICING_PLANS.slice(0, 3);
 
   return (
-    <section id="pricing" className="py-16 sm:py-24 container-fluid">
+    <section id="pricing" className="py-20 sm:py-24 container-fluid">
       {/* Top Header */}
       <ScrollReveal>
         <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 sm:mb-16 gap-6 text-center md:text-left">

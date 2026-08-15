@@ -19,7 +19,7 @@ export default function SchedulePreview() {
   }, []);
 
   return (
-    <section className="container-fluid py-16 sm:py-20">
+    <section className="container-fluid py-20 sm:py-24">
       <ScrollReveal>
         <div className="bg-[#E4E8F1] rounded-[2.5rem] p-6 sm:p-14 text-center">
           <span className="text-[13px] uppercase tracking-widest text-[#475470] font-extrabold block mb-2">
@@ -33,9 +33,11 @@ export default function SchedulePreview() {
           </p>
 
           {/* Real-time Cards Teaser */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left mb-12">
-            {classes.slice(0, 3).map((item, idx) => (
-              <ScrollReveal key={item.id} delay={0.1 * idx}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left mb-12">
+            {classes.slice(0, 3).map((item, idx) => {
+              const isLastItem = idx === 2;
+              return (
+                <ScrollReveal key={item.id} delay={0.1 * idx} className={isLastItem ? "md:col-span-2 lg:col-span-1" : ""}>
                 <div className="bg-white rounded-3xl p-6 shadow-md border border-gray-200/80 flex flex-col justify-between hover:shadow-xl transition-all group h-full">
                   <div>
                     <div className="flex justify-between items-center text-xs text-[#63739A] font-bold uppercase tracking-wider mb-3">
@@ -70,8 +72,9 @@ export default function SchedulePreview() {
                   </div>
                 </div>
               </ScrollReveal>
-            ))}
-          </div>
+            );
+          })}
+        </div>
 
           <Link
             href="/classes"

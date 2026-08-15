@@ -679,6 +679,26 @@ Hero must contain:
 
 ---
 
+### Section Padding and Height Rules
+
+AI tools default to applying the same oversized padding to every section regardless of content. This is one of the most common reasons a site feels bloated and every section feels like it takes up the whole screen when it should not.
+
+**Padding is proportional to content weight. Not uniform.**
+
+```
+Compact sections (stats, logos, small callouts):     padding-block: 48px to 64px
+Standard sections (features, testimonials, about):   padding-block: 80px to 96px
+Hero sections and major cinematic transitions:        padding-block: 128px+
+```
+
+Never apply 128px padding to a section with four data points and a headline. That is the philosophy section problem in image 3. The content is small. The padding made it a full viewport section. It should have been 64px vertical padding maximum.
+
+**`min-height: 100vh` is banned on every section except the hero.** Every other section sizes to its content plus the appropriate padding token from the scale above. If a section feels too short that is a content problem not a padding problem. Add content or rethink the section. Do not inflate it with artificial height.
+
+**The test:** if you removed all the padding from a section and the content itself took up less than 40% of the viewport that section has too much padding. Cut it down to the nearest token in the scale.
+
+---
+
 ### What Generic Looks Like Never Do This
 
 - White card with icon top + title middle + paragraph bottom repeated in a three-column grid
@@ -725,3 +745,5 @@ If any answer is no fix it before moving on.
 14. No any in TypeScript. Model the type properly.
 15. Never use em dashes in any copy, documentation, or content produced in this workflow. Use a colon, a period, or rewrite the sentence.
 16. Always use `pnpm` for all package management, dependency installations, scripts, and builds (e.g., `pnpm install`, `pnpm dev`, `pnpm build`, `pnpm dlx`). Never use `npm`.
+17. Section padding is proportional to content weight. Never uniform. `min-height: 100vh` is banned on every section except the hero.
+18. 150% OS Display Scaling and short logical viewports (< 740px height) require fluid vertical padding with vh clamp and height-responsive media queries (@media(max-height: 740px)) to protect CTA clearance.

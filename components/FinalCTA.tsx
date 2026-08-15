@@ -6,9 +6,9 @@ import ScrollReveal from './ScrollReveal';
 
 export default function FinalCTA() {
   return (
-    <section className="container-fluid py-20 sm:py-28 text-center bg-gradient-to-b from-transparent via-[#E4E8F1]/40 to-[#E4E8F1] mt-12">
+    <section className="w-full py-20 sm:py-28 text-center bg-gradient-to-b from-transparent via-[#E4E8F1]/40 to-[#E4E8F1] mt-12">
       <ScrollReveal>
-        <div className="max-w-4xl mx-auto flex flex-col items-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 flex flex-col items-center">
           <div className="inline-flex items-center gap-2 bg-[#2A2A2D] text-white px-4 py-1.5 rounded-full text-[13px] uppercase tracking-widest font-bold mb-6">
             <Sparkles className="w-3.5 h-3.5 text-[#637304]" />
             <span>Begin Your Transformation Today</span>

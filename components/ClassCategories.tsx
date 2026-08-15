@@ -56,7 +56,7 @@ export default function ClassCategories() {
   ];
 
   return (
-    <section id="categories" className="container-fluid py-16 sm:py-24">
+    <section id="categories" className="container-fluid py-20 sm:py-24">
       <ScrollReveal>
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
           <div>

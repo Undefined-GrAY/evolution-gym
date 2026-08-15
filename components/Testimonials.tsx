@@ -51,7 +51,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-16 sm:py-24 bg-white text-[#2A2A2D] w-full overflow-hidden border-t border-gray-100">
+    <section className="py-20 sm:py-24 bg-white text-[#2A2A2D] w-full overflow-hidden border-t border-gray-100">
       <ScrollReveal>
         <div className="max-w-7xl mx-auto px-4 sm:px-12 text-center mb-12 sm:mb-16">
           <span className="text-[13px] font-bold uppercase tracking-widest text-[#475470] block mb-3">

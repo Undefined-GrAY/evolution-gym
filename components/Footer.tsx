@@ -6,15 +6,15 @@ import { store } from '@/lib/store';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#151618] text-white w-full pt-16 sm:pt-20 pb-10 sm:pb-12 border-t border-white/10 relative overflow-hidden container-fluid">
-      {/* Background Watermark */}
-      <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-full text-center pointer-events-none select-none opacity-5">
-        <h2 className="text-[18vw] font-black uppercase tracking-tighter leading-none text-white whitespace-nowrap">
+    <footer className="bg-[#151618] text-white w-full pt-16 sm:pt-20 pb-10 sm:pb-12 border-t border-white/10 relative overflow-hidden px-4 sm:px-8">
+      {/* Background Watermark (Constrained to max-w-[1440px]) */}
+      <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-full max-w-[1440px] text-center pointer-events-none select-none opacity-5 overflow-hidden">
+        <h2 className="wordmark-capped font-black uppercase tracking-tighter leading-none text-white whitespace-nowrap font-[#Space_Grotesk]">
           EVOLUTION
         </h2>
       </div>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 sm:gap-12 mb-16 sm:mb-20 relative z-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-16 sm:mb-20 relative z-10">
         {/* Brand & Mission Column */}
         <div className="md:col-span-1 flex flex-col justify-between">
           <div>

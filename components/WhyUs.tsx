@@ -53,7 +53,7 @@ export default function WhyUs() {
   return (
     <section className="w-full py-6 sm:py-16">
       <ScrollReveal>
-        <div className="bg-[#475470] text-white rounded-none sm:rounded-[2.5rem] px-6 sm:px-16 py-10 sm:py-16 relative overflow-hidden shadow-2xl max-w-7xl mx-auto">
+        <div className="w-full sm:w-[90%] lg:w-[88%] max-w-7xl mx-auto bg-[#475470] text-white rounded-none sm:rounded-[2.5rem] px-6 sm:px-16 py-10 sm:py-16 relative overflow-hidden shadow-2xl">
           {/* Background Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-transparent to-black/20 pointer-events-none" />
 

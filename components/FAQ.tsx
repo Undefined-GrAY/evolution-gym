@@ -13,7 +13,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="container-fluid max-w-4xl py-16 sm:py-20">
+    <section className="container-fluid max-w-4xl py-20 sm:py-24">
       <ScrollReveal>
         <div className="text-center mb-16">
           <span className="text-[13px] uppercase tracking-widest text-[#475470] font-extrabold block mb-2">

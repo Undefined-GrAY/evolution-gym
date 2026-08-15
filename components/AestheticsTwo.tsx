@@ -23,7 +23,7 @@ export default function AestheticsTwo() {
   ];
 
   return (
-    <section className="py-16 sm:py-24 bg-[#151618] text-white relative overflow-hidden container-fluid">
+    <section className="w-full py-20 sm:py-24 bg-[#151618] text-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-12 relative z-10">
         <ScrollReveal>
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -39,11 +39,12 @@ export default function AestheticsTwo() {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
           {highlights.map((item, idx) => {
             const IconComponent = item.icon;
+            const isLastItem = idx === highlights.length - 1;
             return (
-              <ScrollReveal key={idx} delay={idx * 0.1}>
+              <ScrollReveal key={idx} delay={idx * 0.1} className={isLastItem ? "md:col-span-2 lg:col-span-1" : ""}>
                 <div className="bg-[#2A2A2D]/60 backdrop-blur-md border border-white/10 rounded-3xl p-8 hover:border-white/30 transition-all group h-full">
                   <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center mb-6 text-[#637304] group-hover:scale-110 transition-transform">
                     <IconComponent className="w-6 h-6" />

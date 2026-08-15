@@ -8,7 +8,7 @@ import ScrollReveal from './ScrollReveal';
 
 export default function TrainerSpotlight() {
   return (
-    <section className="container-fluid py-16 sm:py-20">
+    <section className="container-fluid py-20 sm:py-24">
       <div className="bg-[#2A2A2D] text-white rounded-[2.5rem] p-6 sm:p-16 shadow-2xl relative overflow-hidden">
         {/* Header */}
         <ScrollReveal>
@@ -89,12 +89,12 @@ export default function TrainerSpotlight() {
             return (
               <ScrollReveal
                 key={t.id}
-                className={`col-span-1 ${isLast ? 'lg:col-span-2' : ''} ${isMobileHidden ? 'hidden md:block' : 'block'}`}
+                className={`col-span-1 ${isLast ? 'sm:col-span-2 lg:col-span-2' : ''} ${isMobileHidden ? 'hidden md:block' : 'block'}`}
                 delay={0.1 * index}
               >
                 <div
                   className={`relative rounded-3xl overflow-hidden bg-black/40 border border-white/10 aspect-[4/3] sm:aspect-[3/4] ${
-                    isLast ? 'lg:aspect-auto lg:h-full lg:min-h-[200px]' : ''
+                    isLast ? 'sm:aspect-[21/9] lg:aspect-auto lg:h-full lg:min-h-[200px]' : ''
                   } group cursor-pointer flex flex-col justify-end p-4 sm:p-6 hover:border-white/30 transition-all shadow-lg active:scale-98`}
                   onClick={() => store.setTrialModalOpen(true)}
                 >
