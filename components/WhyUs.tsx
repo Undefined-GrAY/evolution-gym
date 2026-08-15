@@ -91,7 +91,7 @@ export default function WhyUs() {
                         staticText={h.staticText}
                       />
                     </span>
-                    <h3 className="text-[13px] font-extrabold uppercase tracking-wider text-white/90 mb-1 leading-tight">
+                    <h3 className="text-[13px] md:font-semibold lg:font-extrabold uppercase tracking-wider text-white/90 mb-1 leading-tight">
                       {h.label}
                     </h3>
                     <p className="text-xs text-white/70 font-light hidden sm:block">
